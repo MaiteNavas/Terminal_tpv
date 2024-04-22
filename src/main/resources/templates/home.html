@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terminal TPV</title>
+        <link rel="stylesheet" th:href="@{/styles.css}">
+    </head>
+    <body>
+		<div th:include="plantilla.html::header"></div>
+        <main id="main-tpv">
+
+            <section id="section-productos">
+                <article class="article-producto" th:each="producto : ${atr_lista_productos}">
+					<a th:href="${'/agregrarProductoAlTicket/' + producto.id}">
+						<div id="article-img-producto">
+							<img th:src="'images/' + ${producto.foto}" alt="Imagen" width="200px" height="100%">	
+						</div>
+			            <div id="article-data-producto">
+	                        <h4 th:text="${producto.nombre}"></h4>
+	                        <p th:text="${producto.precio} + ' €'"></p>
+	                    </div>
+                    </a>
+				</article>     
+            </section>
+            
+            <section id="section-ticket">
+		    	
+                <article id="article-ticket">
+					<img th:src="@{images/logo_taza.png}" alt="logo taza cafe"  width="30px" height="30px">
+					<h3>Bar Tamarindo</h3>
+					<p>CIF-123456778</p>
+					<p>Factura simplificada</p>
+					<table id="table-ticket">
+						<thead>
+							<tr >
+		                        <th>Producto</th>
+		                        <th>Precio</th>  
+		                        <th>Ud.</th>
+		                        <th></th>
+                      		</tr>	
+						</thead>
+
+						<tbody>
+							<tr th:each="producto : ${atr_datos_en_sesion}" >
+		                        <td th:text="${producto.key.nombre}"></td>
+		                        <td th:text="${producto.key.precio} + ' €'"></td>  
+		                        <td th:text="${producto.value}"></td>
+		                        <td>
+									<a th:href="${'/eliminarProductoTicket/' + producto.key.id}" id="delete-ticket">X</a>
+								</td>     
+                      		</tr>
+							
+						</tbody>
+						  <tfoot>
+						    <tr>
+						      <th colspan="2">Total</th>
+							  <td th:text="${atr_total_ticket} + ' €'"></td>
+					    	</tr>
+						
+						  </tfoot>
+
+					</table>
+					<div class="div-buttons-ticket">
+						<a th:href="'/guardarTicket'" class="button-ticket">Guardar</a>
+						<a th:href="'/cancelarTicket'" class="button-ticket">Cancelar</a>
+					</div>
+				</article>
+            </section>
+            
+        </main>
+        <footer>
+            <p>Designed by: Maite Navas</p>
+    	</footer>
+       
+
+    </body>
+</html>

@@ -1,0 +1,256 @@
+:root {
+    --heightHeader:100px;
+    --heightNav: 50px;
+    --heightFooter:40px;
+    --paddingGeneral:15px;
+
+    --fontSizeMenu: 22px;
+    --fontSerif:"Garamond";
+    --fontSans:"Helvetica";
+
+    --mainColor: #b8bdb5;
+    --mainColorLight: #e0e2db;
+    --mainColorDark: #5d6868;
+
+    --contrastColor: #738985;
+    --contrastColorLight: rgb(170, 190, 187);
+    --contrastColorDark: #5f7470;
+
+    --backgroundLight: rgb(244, 246, 248);
+    --backgroundDark: rgb(161, 161, 161);
+    --boxShadow: 0 0px 2px var(--backgroundDark, 0.7);
+    
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: var(--fontSans);
+
+}
+
+a {
+	text-decoration: none;
+	color:var(--mainColorDark);
+
+}
+
+    /* ESTILOS HEADER */
+
+header {
+    height: var(--heightHeader);
+    padding: var(--paddingGeneral);
+    background-color: var(--mainColorLight);
+    padding: var(--paddingGeneral);
+    box-shadow: 0 0px 2px var(--backgroundDark, 0.7);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+
+}
+
+h1 {
+    color:var(--mainColorDark);
+    font-family:var(--fontSerif);
+    
+}
+
+#header-title {
+	width: 40%;
+	
+}
+
+header-nav {   
+	width: 60%;
+    margin-right: 10px;
+    
+}
+
+/* ESTILOS NAV */
+
+nav ul {
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+nav ul li{
+    list-style: none;
+    
+}
+
+.link-menu {
+    display: inline-block;
+    font-weight: bold;
+    font-size: var(--fontSizeMenu);
+    font-family:var(--fontSerif);
+    text-decoration: none;
+    width: 100%;
+    margin:15px;
+    height: var(--heightNav);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainColorDark);
+
+}
+
+.link-menu:hover {
+    color: var(--mainColor);
+    background-color: var(--mainColorDark);
+
+}
+
+
+        /* ESTILOS DEL MAIN */
+
+main{
+    background-color: var(--backgroundLight);
+    min-height: 100vh;
+    display:flex;
+}
+#main-tpv {
+    display: flex;
+    flex-direction:row;
+
+}
+
+section{
+    padding:var(--paddingGeneral);
+
+}
+#section-productos { 
+    width: 70%; 
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	
+}
+
+.article-producto {
+	background-color: var(--contrastColorLight);
+	border-radius: 8px;
+    padding:var(--paddingGeneral);
+    box-shadow: 0 2px 4px grey;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    height: 200px;
+    width: 200px;
+    margin:20px;
+
+}
+
+.article-producto:hover {
+    background-color: var(--contrastColor);
+	box-shadow:0 0px 2px var(--backgroundDark, 0.7);
+    cursor: grab;
+    
+}
+
+.article-producto img {
+	box-shadow: var(--boxShadow);
+	width: 200px;
+	height: 150px;
+	object-fit: cover;
+
+}
+
+#article-data-producto {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+
+}
+
+#section-ticket{
+    background-color:var(--contrastColorLight);
+    width: 30%;
+}
+
+#article-ticket{
+	background-color:var(--backgroundLight);
+	padding: 10px;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px grey;
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+
+#table-ticket {
+	padding: var(--paddingGeneral);
+	margin-top:10px;
+	width: 100%;
+	height: 100%;
+}
+
+#table-ticket th {
+	text-align: left;
+	padding: 5px;
+	
+}
+
+#table-ticket td{
+	padding: 5px;
+	font-weight: 400;
+	
+
+}
+
+#article-ticket img{
+	margin:10px;
+	width: 60px;
+	height: 60px;
+}
+.div-buttons-ticket {
+	padding: var(--paddingGeneral);
+}
+
+.button-ticket {
+	border-radius:8px;
+	padding: 8px;
+	background-color: var(--contrastColorDark);
+	color: var(--backgroundLight);
+}
+
+.button-ticket:hover {
+	background-color: var(--contrastColorLight);
+	color: var(----contrastColorDark);
+}
+
+#delete-ticket {
+	color:red;
+}
+
+
+        /* ESTILOS DEL FOOTER */
+
+footer {
+    height: var(--heightFooter);
+    background-color: var(--mainColorLight);
+    padding:var(--paddingGeneral);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 22px;
+    color:var(--mainColorDark);
+}

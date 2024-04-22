@@ -1,0 +1,37 @@
+#main-ventas {
+	padding: 15px;
+	min-height:100vh;
+}
+
+#main-ver-ticket {
+	width: 100%;
+	padding: 15px;
+	min-height:100vh;
+	background-color: rgb(170, 190, 187);
+}
+
+#article-ticket {
+	width:100%;
+}
+
+#section-table-ventas {
+	background-color:rgb(170, 190, 187);
+	border-radius: 9px;
+	margin: 20px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+#div-fecha {
+	display: flex;
+	justify-content: space-evenly;
+}
+#div-fecha p {
+	padding: 0px 5px;
+}
+
+
+

@@ -1,0 +1,32 @@
+#main-admin {
+	
+	display:flex;
+	flex-direction:column;
+
+}
+section {
+	padding: 10px;
+}
+
+#section-form-admin {
+	width:50%;
+	padding: 20px;
+	background-color:rgb(170, 190, 187);
+	border-radius: 9px;
+	margin: 10px;
+}
+
+#section-table-admin {
+	
+	padding: 20px;
+	background-color:rgb(170, 190, 187);
+	border-radius: 9px;
+	margin: 10px;
+}
+
+table img {
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
